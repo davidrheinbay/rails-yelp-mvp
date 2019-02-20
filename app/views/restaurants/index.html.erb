@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Stupid Yelp</h1>
+
+  <h2>Restaurants</h2>
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+    <%= link_to restaurant.name, restaurant_path(restaurant), class: "list-group-item list-group-item-action" %>
+    <% end %>
+  </ul>
+  <hr>
+
+  <%= link_to new_restaurant_path do %>
+  <button class="btn btn-primary">+ Create New Restaurant</button>
+  <% end %>
+</div>
